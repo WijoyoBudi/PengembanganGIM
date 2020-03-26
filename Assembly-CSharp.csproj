@@ -57,6 +57,7 @@
      <Compile Include="Assets\PergerakanRaket.cs" />
      <Compile Include="Assets\PergereakanRaketKiri.cs" />
      <Compile Include="Assets\sc.cs" />
+     <Compile Include="Assets\TimerScript.cs" />
  <Reference Include="Unity.TextMeshPro.Editor">
  <HintPath>C:/Users/Lenovo/Documents/Unity/Pongz/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
  </Reference>
