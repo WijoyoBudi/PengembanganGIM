@@ -9,6 +9,7 @@ public class BallCollision : MonoBehaviour
     public Rigidbody2D sesuatu;
     public GameObject MasterScript;
     public Animator anim;
+    public AudioSource HitEffect;
     void Start()
     {
         sesuatu.velocity = new Vector2(-1,-1)* speed;
@@ -31,6 +32,9 @@ public class BallCollision : MonoBehaviour
             MasterScript.GetComponent<ScoreScript>().UpdateScore(other.collider.name);
             StartCoroutine(Jeda()); 
         }
+        if (other.collider.tag=="Player"){
+            HitEffect.Play();
+        }
 
         IEnumerator Jeda()
         {
@@ -41,5 +45,5 @@ public class BallCollision : MonoBehaviour
             sesuatu.velocity = new Vector2(-1,-1)* speed;
             anim.SetBool("IsMoving",true);
         }
-    }
+     }
 }
